@@ -313,7 +313,7 @@ export default function ChatInterface() {
 
       <footer className="text-center">
         <p className="text-[10px] text-white/30 uppercase tracking-[0.2em] font-mono">
-          Powered by Gemini AI • Distinctive Neural Interface
+          Powered by GROQ AI • NEXT-GEN AI COMPANION <br /> Developed by <a href="https://github.com/aura-ai" target="_blank" rel="noopener noreferrer" className="text-aura-blue hover:underline">
         </p>
       </footer>
     </div>
