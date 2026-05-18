@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-aura-black: #050505;
+  --color-aura-dark: #1A1A1A;
+  --color-aura-blue: #2979FF;
+  --color-aura-border: rgba(255, 255, 255, 0.05);
+}
+
+@layer base {
+  body {
+    @apply bg-aura-black text-white selection:bg-aura-blue/30;
+    overflow: hidden;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-aura-border rounded-full hover:bg-white/20 transition-colors;
+  }
+}
+
+.chat-container {
+  mask-image: linear-gradient(to bottom, transparent, black 5%, black 95%, transparent);
+}
+
+.glass-card {
+  @apply bg-aura-dark/80 backdrop-blur-xl border border-aura-border;
+}
+
+.chat-markdown {
+  @apply text-sm leading-relaxed;
+}
+
+.chat-markdown table {
+  @apply w-full border-collapse;
+}
+
+.chat-markdown th, 
+.chat-markdown td {
+  @apply border border-aura-border px-4 py-2 text-left;
+}
+
+.chat-markdown th {
+  @apply bg-aura-border font-semibold;
+}
+
+.chat-markdown tr:nth-child(even) {
+  @apply bg-aura-border/30;
+}

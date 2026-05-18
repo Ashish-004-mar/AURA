@@ -1,0 +1,8 @@
+{
+  "name": "AURA Chat",
+  "description": "A premium, dark-themed AI chatbot powered by Google Gemini, featuring a sleek minimalist design and fluid animations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
