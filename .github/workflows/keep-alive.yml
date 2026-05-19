@@ -1,0 +1,18 @@
+name: Keep AURA Chat Awake
+
+on:
+  schedule:
+    # Yeh har 10 minute me automatic chalega (UTC time format)
+    - cron: '*/10 * * * *'
+  workflow_dispatch: # Isse aap manually bhi jab chahein chala sakte hain
+
+jobs:
+  ping-server:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Render Backend
+        run: |
+          curl -I -s -X POST https://aura-ai-8vmm.onrender.com/api/chat \
+          -H "Content-Type: application/json" \
+          -d '{"messages": []}'
+          echo "Ping sent successfully to AURA Server!"
